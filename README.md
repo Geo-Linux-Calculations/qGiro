@@ -1,63 +1,73 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Geo-Linux-Calculations/qGiro)
+![GitHub Release Date](https://img.shields.io/github/release-date/Geo-Linux-Calculations/qGiro)
+![GitHub repo size](https://img.shields.io/github/repo-size/Geo-Linux-Calculations/qGiro)
+![GitHub all releases](https://img.shields.io/github/downloads/Geo-Linux-Calculations/qGiro/total)
+![GitHub](https://img.shields.io/github/license/Geo-Linux-Calculations/qGiro)
+
 # qGiro  
 #### Author: Oleg  M.Kosorukov  
-#### Версия 0.3
+#### Version 0.3
 
-#### Программа обработки данных при ориентировании подземной маркшейдерской основы.
+#### Data processing program for orientation of the underground mine surveyor base.
 
-Ориентирование стороны подземной полигонометрии выполняется при помощи гиротеодолита с двумя гироблоками и состоит из:
-- определения поправки гиротеодолита на стороне с известным дирекционным углом (работа на поверхности);
-- определения дирекционного угла ориентируемой стороны подземной полигонометрии (работа в строящемся тоннеле);
-- повторного определения поправки гиротеодолита на стороне с известным дирекционным углом (работа на поверхности).
-Все измерения выполняются каждым гироблоком.
+The orientation of the side of underground polygonometry is performed using a gyrotheodolite with two gyro blocks and consists of:
+- determination of the gyrotheodolite correction on the side with a known directional angle (work on the surface);
+- determination of the directional angle of the oriented side of the underground polygonometry (work in the tunnel under construction);
+- re-determination of the gyrotheodolite correction on the side with a known directional angle (work on the surface).
+All measurements are taken by each gyro unit.
 
-#### Методика
-Определение поправки гиротеодолита выполнялось до и после определения гироскопического азимута стороны подземной полигонометрии, на сторонах наземной полигонометрии.
-Сущность определения постоянной поправки (∆) состоит в определении угла между известным дирекционным углом наземной полигонометрии планового опорного обоснования и гироскопическим азимутом, определенным гиротеодолитом.
-Определение гироскопического азимута сторон выполнялось в соответствии с п.8.30. ВСН 160-69, глава 6.3.2 СП 120.13330.2012 " Метрополитены. Актуализированная редакция СНиП 32-02-2003". 
+#### Methodology
+The determination of the gyrotheodolite correction was carried out before and after the determination of the gyroscopic azimuth of the side of the underground polygonometry, on the sides of the ground polygonometry.
+The essence of determining the constant correction (∆) is to determine the angle between the known directional angle of ground polygonometry of the planned reference justification and the gyroscopic azimuth determined by the gyrotheodolite.
+The determination of the gyroscopic azimuth of the sides was carried out in accordance with paragraph 8.30. VSN 160-69, chapter 6.3.2 SP 120.13330.2012 "Subways. Updated edition of SNiP 32-02-2003".
 
-Определение поправки гиротеодолита производилось непосредственно на пунктах планового обоснования, а гироскопического азимута стороны подземной полигонометрии выполняется «внецентренно», т.е. гиротеодолит устанавливался не над пунктом подземной полигонометрии, а в произвольной точке в непосредственной близости от него. При определении азимута измеряются направления на пункты полигонометрии и расстояния до них. В азимут Агир(вц) вносится поправка ∆А.
+The determination of the gyrotheodolite correction was carried out directly at the points of the planning justification, and the gyroscopic azimuth of the side of the underground polygonometry is performed "eccentrically",
+i.e. the gyrotheodolite was installed not over the point of underground polygonometry, but at an arbitrary point in the immediate vicinity of it. When determining the azimuth, the directions to the points of polygonometry
+and the distances to them are measured. The Aghir azimuth (vts) is corrected by ∆А.
 
-В результате выполненных работ должны быть определены гироскопические азимуты сторон подземной полигонометрии прямого и обратного направления. Расхождения значений вычисленного дирекционного угла подземной линии, определенных из нескольких ориентирований, не должны превышать 20″ (п.8.58. ВСН 160-69, глава 6.3.2 СП 120.13330.2012 " Метрополитены. Актуализированная редакция СНиП 32-02-2003".
+As a result of the work performed, the gyroscopic azimuths of the sides of the underground polygonometry of the forward and backward directions should be determined.
+The discrepancies in the values ​​of the calculated directional angle of the underground line, determined from several orientations, should not exceed 20"
+(clause 8.58. VSN 160-69, chapter 6.3.2 SP 120.13330.2012" Subways. Updated edition of SNiP 32-02-2003).
 
-#### Вкладка "Оформление":
-Содержит информацию о дате измерения, номер гиротеодолита и обоих гироблоков. 
-- Тема - не используется
-- Письмо - Номер письма от даты и название компании приславшая заявку на выполнение
-- Колонтитул - Информация помещаемая в колонтитул
-- Введение - Информация помещаемая в начале отчета, где приводится основная информация
+#### Tab "Оформление":
+Contains information about the date of measurement, the number of the gyrotheodolite and both gyro blocks.
+- Theme - not used
+- Letter - The number of the letter from the date and the name of the company that sent the application for implementation
+- Header and footer - Information placed in the header
+- Introduction - Information placed at the beginning of the report, which provides basic information
 
-#### Вкладка "Наземные измерения":
-- Широта - Географическая широта, с точностью до 4 знака
-- Пункты наземной полилигонометрии, координаты и измеренный азимут в обоих направлениях
+#### Tab "Наземные измерения":
+- Latitude - Geographic latitude, accurate to 4 digits
+- Points of ground polygonometry, coordinates and measured azimuth in both directions
 
-#### Вкладка "Подземные из-я"
-- Пункты подземной полигонометрии
-- координаты X и Y
-- измеренный азимут каждым гироблоком в обоих направлениях
-- внецентренный угол, если не нужен можно поставить 0 00 00.0
+#### Tab "Подземные из-я"
+- Points of underground polygonometry
+- X and Y coordinates
+- measured azimuth by each gyro unit in both directions
+- eccentric angle, if not needed you can put 0 00 00.0
 
-#### Вкладка "Расчет" 
-- Все полученные дирекционные углы из поправок и измеренного гироскопического азимута
-- среднее значение и разница с допуском на каждый гироблок
-- средний дирекционный угол из всех измерений и разница с дирекционным из полигонометии.
-- точность определения
+#### Tab "Расчет" 
+- All obtained directional angles from corrections and measured gyroscopic azimuth
+- average value and difference with a tolerance for each gyro unit
+- the average directional angle from all measurements and the difference with the directional angle from polygonometry.
+- determination accuracy
 
-#### Окно "Лог работы программы" 
-- все входные данные с проверкой корректности введенных азимутов
-- расчет поправок
-- данные и формула для расчета каждого дирекционного угла из поправок
+#### Window "Лог работы программы" 
+- all input data with checking the correctness of the entered azimuths
+- calculation of corrections
+- data and formula for calculating each directional angle from the amendments
 
-#### кнопка "Вычислить"
-- выполняет все вычисления 
-- сохраняет подробно каждый этап в окно лога
+#### Button "Вычислить"
+- performs all calculations
+- saves in detail each stage in the log window
 
-#### кнопка "Отчет"
-- читает файл шаблона "templateFull.docx" из корня папки с программой
-- заполняет вычисленными значениями
-- сохраняет на "C:\WINDOWS\Temp\OtchetFull.docx"
-- открывает сохраненный отчет в WORD, если он установлен (проверял в Office 2013) 
+#### Button "Отчет"
+- reads the template file "templateFull.docx" from the root of the program folder
+- fills in with calculated values
+- saves to "C: \ WINDOWS \ Temp \ OtchetFull.docx"
+- opens the saved report in WORD, if it is installed (checked in Office 2013)
 
 #### TO-DO:
-- Перенести шаблон "templateFull.docx" из папки с программой в папку пользователя "Мои документы"
-- Перенести файл "OtchetFull.docx" с результатом в папку пользователя.
-- Добавить в программу и шаблон дополнительные свойства пункта подземной полигонометрии, "Номер кольца" и "Пикет".
+- Move the template "templateFull.docx" from the program folder to the user's folder "My Documents"
+- Transfer the file "OtchetFull.docx" with the result to the user's folder.
+- Add additional properties of the underground polygonometry point, "Ring number" and "Station" to the program and template.

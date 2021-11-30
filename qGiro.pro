@@ -17,14 +17,14 @@ VERSION = 0.3
 TARGET = qGiro
 TEMPLATE = app
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    geo.cpp
+SOURCES += src/main.cpp\
+           src/mainwindow.cpp \
+           src/geo.cpp
 
-HEADERS  += mainwindow.h \
-    geo.h
+HEADERS  +=  src/mainwindow.h \
+             src/geo.h
 
-FORMS    += mainwindow.ui
+FORMS    +=  src/mainwindow.ui
 
 DISTFILES +=
 
@@ -35,15 +35,15 @@ RC_FILE = myapp.rc
 CONFIG += release
 CONFIG += static
 
-QMAKE_LFLAGS += -static -static-libgcc
-LIBS += -static-libgcc
+#QMAKE_LFLAGS += -static -static-libgcc
+#LIBS += -static-libgcc
 
 # Выбираем директорию сборки исполняемого файла
 # в зависимости от режима сборки проекта
 CONFIG(debug, debug|release) {
-    DESTDIR = $$OUT_PWD/../GiroRelease/debug/
+    DESTDIR = $$OUT_PWD/debug/
 } else {
-    DESTDIR = $$OUT_PWD/../bin/
+    DESTDIR = $$OUT_PWD/bin/
 }
 
 # разделяем по директориям все выходные файлы проекта
@@ -75,10 +75,10 @@ macx {
 
 CONFIG( debug, debug|release ) {
     # debug
-    DEPLOY_TARGET = $$shell_quote($$shell_path($${OUT_PWD}/../GiroRelease/debug/$${TARGET}$${TARGET_CUSTOM_EXT}))
+    DEPLOY_TARGET = $$shell_quote($$shell_path($${OUT_PWD}/debug/$${TARGET}$${TARGET_CUSTOM_EXT}))
 } else {
     # release
-    DEPLOY_TARGET = $$shell_quote($$shell_path($${OUT_PWD}/../bin/$${TARGET}$${TARGET_CUSTOM_EXT}))
+    DEPLOY_TARGET = $$shell_quote($$shell_path($${OUT_PWD}/bin/$${TARGET}$${TARGET_CUSTOM_EXT}))
 }
 
 #  # Uncomment the following line to help debug the deploy command when running qmake
